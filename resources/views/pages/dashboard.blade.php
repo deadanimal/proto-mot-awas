@@ -1,5 +1,7 @@
 @extends('layouts.base')
 
+@section('title', 'Page Title')
+
 @section('content')
 
 <div class="container-fluid">
@@ -21,7 +23,7 @@
                         </a>
                     </form>
                 </div>
-                <h4 class="page-title">Analytics</h4>
+                <h4 class="page-title">Dashboard</h4>
             </div>
         </div>
     </div>

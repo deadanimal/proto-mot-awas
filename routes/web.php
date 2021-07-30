@@ -17,6 +17,18 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
 
+Route::get('/semakan', function () {
+    return view('pages.semakan');
+});
+
+Route::get('/pemantauan-operasi', function () {
+    return view('pages.operasikamera');
+});
+
+Route::get('/saman', function () {
+    return view('pages.keluarsaman');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
