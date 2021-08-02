@@ -35,7 +35,20 @@ class FailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fileModel = new Fail;
+
+        if($request->file()) {
+            $fileName = time().'_'.$request->file->getClientOriginalName();
+            $filePath = $request->file('file')->storeAs('uploads', $fileName, 'public');
+
+            $fileModel->nama = time().'_'.$request->file->getClientOriginalName();
+            $fileModel->fail_path = '/dashboard/' . $filePath;
+            $fileModel->save();
+
+            return back()
+            ->with('success','File has been uploaded.')
+            ->with('file', $fileName);
+        }
     }
 
     /**

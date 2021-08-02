@@ -12,20 +12,49 @@
     <!-- <link href="{{ asset('plugins/icons/_materialdesignicons.scss')}}" rel="stylesheet" type="text/css" /> -->
     <link href="{{ asset('plugins/icons/_unicons.scss')}}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css-sass/app.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/advancedForm.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/brite.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/calendarApp.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/editorsForm.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/email.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/gridDataTable.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/projectApp.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/vectorMap.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/dashboardAnalytics.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <link href="{{ asset('css-sass/taskApp.css')}}" rel="stylesheet" type="text/css" id="light-style" />
-    <!-- <link href="{{ asset('css/vendor/select.bootstrap5.css')}}" rel="stylesheet" type="text/css" /> -->
-    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
 
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/jata-logo.png')}}" type="image/png" />
+    <!-- Title -->
     <title>MOT - AWAS (Prototype)</title>
+
+    <style>
+        #chartdivadmindashboard1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadmindashboard2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadminsemakan1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadminsemakan2 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadminoperasikamera1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadminkeluarsaman1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        #chartdivadminkeluarsaman2 {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":true,"darkMode":false, "showRightSidebarOnStart": true}'>
@@ -34,15 +63,23 @@
         <div class="leftside-menu">
 
 
-            <a href="/dashboard" class="logo text-center logo-light mb-2">
-                <div class="row text-center mt-3">
-                    <div class="col-5">
+            <a href="/dashboard" class="logo text-center logo-light mb-4">
+                <span class="row logo-lg text-center mt-3">
+                    <div class="col-12">
                         <img class="text-end" src="{{ asset('images/jata-logo.png')}}" alt="" height="50">
                     </div>
-                    <div class="col-7 d-flex">
+                    <div class="col-12">
                         <h5 class="text-white mt-0 pt-0">Ministry of Transportation</h5>
                     </div>
-                </div>
+                </span>
+                <span class="row logo-sm text-center mt-3">
+                    <div class="col-12">
+                        <img class="text-end" src="{{ asset('images/jata-logo.png')}}" alt="" height="50">
+                    </div>
+                    <div class="col-12">
+                        <h5 class="text-white mt-0 pt-0">MoT</h5>
+                    </div>
+                </span>
                 <!-- <span class="logo-sm">
                     <img src="{{ asset('images/jata-logo.png')}}" alt="" height="40">
                 </span> -->
@@ -58,7 +95,7 @@
                 </span>
             </a> -->
 
-            <div class="h-100" id="leftside-menu-container" data-simplebar>
+            <div class="h-100 mt-2" id="leftside-menu-container" data-simplebar>
 
 
                 <ul class="side-nav mt-4">
@@ -411,7 +448,7 @@
                         <div class="col-md-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © 
+                            </script> ©
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-end footer-links d-none d-md-block">
@@ -427,18 +464,13 @@
 
     </div>
 
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dataviz.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
-
-
-    <script defer="defer" src="{{ asset('js-sass/chatApp.js')}}"></script>
-    <script defer="defer" src="{{ asset('js-sass/app.js')}}"></script>
-    <!-- <script defer="defer" src="{{ asset('js-sass/dashboardEcommerce.js')}}"></script> -->
-    <script defer="defer" src="{{ asset('js-sass/dashboardAnalytics.js')}}"></script>
-    <!-- <script defer="defer" src="{{ asset('js-sass/dashboardProjects.js')}}"></script> -->
-    <script defer="defer" src="{{ asset('js-sass/taskApp.js')}}"></script>
-    <script defer="defer" src="{{ asset('js-sass/fileUploadForm.js')}}"></script>
-    <!-- <script defer="defer" src="{{ asset('js-sass/advancedForm.js')}}"></script> -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script defer="defer" src="{{ asset('js-sass/app.js')}}"></script>>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
 
 </body>
 

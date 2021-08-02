@@ -14,7 +14,12 @@ class CreateKamerasTable extends Migration
     public function up()
     {
         Schema::create('kameras', function (Blueprint $table) {
-            $table->id();
+            $table->id('operasikamera_id');
+            $table->string('status_healthcheck', 50);
+            $table->integer('jumlah_trafik');
+            $table->string('notifikasi', 100);
+            $table->date('tarikh');
+            $table->string('lokasi', 50);
             $table->timestamps();
         });
     }

@@ -14,7 +14,9 @@ class CreateFailsTable extends Migration
     public function up()
     {
         Schema::create('fails', function (Blueprint $table) {
-            $table->id();
+            $table->id('fail_id');
+            $table->string('name')->nullable();
+            $table->string('fail_path')->nullable();
             $table->timestamps();
         });
     }

@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/log-masuk', function () {
+    return view('auth.logmasuk');
+});
 
 Route::get('/dashboard', function () {
     return view('pages.dashboard');

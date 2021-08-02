@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInsidensTable extends Migration
+class CreateSamanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateInsidensTable extends Migration
      */
     public function up()
     {
-        Schema::create('insidens', function (Blueprint $table) {
-            $table->id('admin_id');
-            $table->foreignId('semakin_id');
-            $table->string('keputusan', 100);
-            $table->date('tarikh');
+        Schema::create('samans', function (Blueprint $table) {
+            $table->id('saman_id');
+            $table->foreignId('fail_id');
             $table->string('jenis_kesalahan', 100);
+            $table->date('tarikh');
+            $table->string('lokasi', 100);
+            $table->float('jumlah_saman', 8, 2);
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateInsidensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('insidens');
+        Schema::dropIfExists('samans');
     }
 }

@@ -14,7 +14,13 @@ class CreateImejvideosTable extends Migration
     public function up()
     {
         Schema::create('imejvideos', function (Blueprint $table) {
-            $table->id();
+            $table->id('fail_id');
+            $table->date('tarikh');
+            $table->integer('bil_imej');
+            $table->integer('bil_vid');
+            $table->string('lokasi', 100);
+            $table->float('saiz', 8, 2);
+            $table->float('kualiti', 8, 2);
             $table->timestamps();
         });
     }

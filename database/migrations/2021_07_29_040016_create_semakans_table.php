@@ -14,7 +14,13 @@ class CreateSemakansTable extends Migration
     public function up()
     {
         Schema::create('semakans', function (Blueprint $table) {
-            $table->id();
+            $table->id('semakan_id');
+            $table->foreignId('saman_id');
+            $table->foreignId('fail_id');
+            $table->date('tarikh');
+            $table->string('status', 100);
+            $table->string('nama', 100);
+            $table->string('jenis_kenderaan', 100);
             $table->timestamps();
         });
     }
